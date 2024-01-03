@@ -16,7 +16,7 @@ const productRoute = require('./routes/product')
 // const usersRoute = require('./routes/user')
 // const feedbackRoute = require('./routes/feedback')
 
-app.use('/api/product', productRoute)
+app.use('/api/products', productRoute)
 // app.use('/api/users', usersRoute)
 // app.use('/api/feedbacks', feedbackRoute)
 
