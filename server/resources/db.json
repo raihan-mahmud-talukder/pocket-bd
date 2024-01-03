@@ -1,19 +1,19 @@
 [
     {
         "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
+        "img": "images/akher-dana-gur.jpeg",
         "category": "akh",
         "price": 100
     },
     {
         "name": "akher jhola gur",
-        "img": "images/akher jhola gur.png",
+        "img": "images/akher-jhola-gur.png",
         "category": "akh",
         "price": 100
     },
     {
         "name": "akher patali gur",
-        "img": "images/akher patali gur.jpeg",
+        "img": "images/akher-patali-gur.jpeg",
         "category": "akh",
         "price": 100
     },
@@ -24,75 +24,117 @@
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
+        "name": "binni dhaner khoi.jpg",
+        "img": "images/binni-dhaner-khoi.jpg",
+        "category": "dhan",
+        "price": 100
+    },
+    {
+        "name": "dhaper khoi",
+        "img": "images/dhaper-khoi.jpg",
+        "category": "dhap",
+        "price": 100
+    },
+    {
+        "name": "gaowa ghee",
+        "img": "images/gaowa-ghee.jpeg",
+        "category": "ghee",
+        "price": 100
+    },
+    {
+        "name": "golpatar gur",
+        "img": "images/golpatar-gur.jpeg",
+        "category": "golpata",
+        "price": 100
+    },
+    {
+        "name": "jober chhatu",
+        "img": "images/jober-chhatu.jpeg",
+        "category": "job",
+        "price": 100
+    },
+    {
+        "name": "jolpaiyer tel",
+        "img": "images/jolpaiyer-tel.jpg",
+        "category": "jolpai",
+        "price": 100
+    },
+    {
+        "name": "khejurer dana gur",
+        "img": "images/khejurer-dana-gur.jpg",
+        "category": "khejur",
+        "price": 100
+    },
+    {
+        "name": "khejurer jhola gur",
+        "img": "images/khejurer-jhola-gur.jpeg",
+        "category": "khejur",
+        "price": 100
+    },
+    {
+        "name": "khejurer patali gur",
+        "img": "images/khejurer-patali-gur.jpeg",
         "category": "akh",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
+        "name": "lal-chini",
+        "img": "images/lal-chini.jpg",
         "category": "akh",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
+        "name": "narkeler tel",
+        "img": "images/narkeler-tel.jpeg",
         "category": "akh",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "narkeler gur",
+        "img": "images/narkeler-gur.jpg",
+        "category": "narkel",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "taler gur",
+        "img": "images/taler-gur.jpg",
+        "category": "tal",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "taler misri",
+        "img": "images/taler-misri.jpeg",
+        "category": "tal",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "tilet khaja",
+        "img": "images/tiler-khaja.jpg",
+        "category": "til",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "tiler tel",
+        "img": "images/tiler-tel.jpeg",
+        "category": "til",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "tishir tel",
+        "img": "images/tishir-tel.jpeg",
+        "category": "tishi",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "tormujer tel",
+        "img": "images/tormujer-tel.jpg",
+        "category": "tormuj",
         "price": 100
     },
     {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
-        "price": 100
-    },
-    {
-        "name": "akher dana gur",
-        "img": "images/akher dana gur.jpeg",
-        "category": "akh",
+        "name": "vennar tel",
+        "img": "images/vennar-tel.jpg",
+        "category": "venna",
         "price": 100
     }
 ]

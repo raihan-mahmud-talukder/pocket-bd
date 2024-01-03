@@ -37,6 +37,7 @@ header {
   justify-content: space-between;
   text-transform: uppercase;
   padding: 0 2rem;
+  z-index: 1;
 }
 
 header h1 {
@@ -84,11 +85,13 @@ a.active {
   position: relative;
   display: flex;
   flex-direction: column;
+  background: rgb(211, 211, 211, 0.25);
 }
 
 .product img {
-  width: 25rem;
-  height: 20rem;
+  width: 20rem;
+  height: 15rem;
+  /* border: 1px solid black; */
 }
 
 .product h3 {
@@ -96,7 +99,7 @@ a.active {
   text-transform: uppercase;
   color: green;
   /* margin: 0; */
-  /* letter-spacing: 0.25rem; */
+  letter-spacing: 0.15rem;
 }
 
 .product h5 {
