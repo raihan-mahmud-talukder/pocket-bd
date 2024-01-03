@@ -1,5 +1,11 @@
+import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
+
 export const App = () => {
   return (
-    <div>App</div>
+    <main>
+      <Header />
+      <Footer />
+    </main>
   )
 }
