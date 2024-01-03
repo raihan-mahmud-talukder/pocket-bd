@@ -12,11 +12,11 @@ app.use(express.json())
 
 app.use(cors())
 
-// const photoRoute = require('./routes/photo')
+const productRoute = require('./routes/product')
 // const usersRoute = require('./routes/user')
 // const feedbackRoute = require('./routes/feedback')
 
-// app.use('/api/photos', photoRoute)
+app.use('/api/product', productRoute)
 // app.use('/api/users', usersRoute)
 // app.use('/api/feedbacks', feedbackRoute)
 
