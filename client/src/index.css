@@ -69,3 +69,12 @@ menu ul li a:hover,
 a.active {
   color: black;
 }
+
+footer {
+  width: 100%;
+  background: green;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5rem;
+}
