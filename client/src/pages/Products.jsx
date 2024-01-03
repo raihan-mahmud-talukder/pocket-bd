@@ -19,10 +19,14 @@ export const Products = () => {
   }, [])
 
   return (
-    <div className="products">
+    <>
+    <div className="info">
       <h4>{products.length} products are available</h4>
+    </div>
+    <div className="products">
       {products.map(product => {return <Product product={product} key={product._id} />})}
     </div>
+    </>
   )
 }
 
@@ -39,8 +43,9 @@ const Product = ({ product }) => {
     <div className="product">
       <img src={product.img} alt={product.name} />
       <h3>{product.name}</h3>
+      {/* <p>{product.category}</p> */}
       <h5>BDT {product.price} per KG</h5>
-      <button onClick={privateRoute}>Details</button>
+      <button className='btn' onClick={privateRoute}>Details</button>
     </div>
   )
 }
