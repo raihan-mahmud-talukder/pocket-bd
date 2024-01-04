@@ -12,14 +12,14 @@ app.use(express.json())
 
 app.use(cors())
 
-const CLIENT_ID = '402946356001-ija2fhgavkf8k1en3nd2l6nqsv5kk8rh.apps.googleusercontent.com'
-const CLIENT_SECRET = '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'
+const CLIENT_ID = '119945950962-fuoohsilsoe21pjv303h94bump878tl5.apps.googleusercontent.com'
+const CLIENT_SECRET = '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'
 
 const session = require('express-session')
 const passport = require('passport')
 const OAuth2Strategy = require('passport-google-oauth2').Strategy
 
-const User = require('../models/user')
+const User = require('./models/user')
 
 const productRoute = require('./routes/product')
 const usersRoute = require('./routes/user')
@@ -42,12 +42,11 @@ passport.use(
         {
             clientID: CLIENT_ID,
             clientSecret: CLIENT_SECRET,
-            callbackURL: '/auth/google/secrets',
+            callbackURL: '/auth/google/callback',
             scope: ['profile', 'email']
         }, async (accessToken, refreshToken, profile, done) => {
-            console.log(profile)
             try {
-                const user = await User.findOne({ googleId: profile.id })
+                let user = await User.findOne({ googleId: profile.id })
                 if (!user) {
                     user = new User(
                         {
@@ -69,7 +68,7 @@ passport.deserializeUser((user, done) => { done(null, user) })
 
 app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
 
-app.get("/auth/google/secrets", passport.authenticate('google', {
+app.get('/auth/google/callback', passport.authenticate('google', {
     successRedirect: 'http://localhost:3000/dashboard',
     failureRedirect: 'http://localhost:3000/login'
 }))

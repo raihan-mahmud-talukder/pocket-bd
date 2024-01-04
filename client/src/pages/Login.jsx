@@ -18,12 +18,18 @@ export const Login = () => {
     const login = async event => {
         event.preventDefault()
         const user = { email, password }
+        console.log(user, 'triggered')
         try {
             const result = (await axios.post('/api/users/login', user)).data
             localStorage.setItem('currentUser', JSON.stringify(result))
             modal()
             navigate('/products')
         } catch (error) { console.log(error) }
+    }
+
+    const google = () => {
+        window.open('http://localhost:5000/auth/google/callback', '_self')
+        // modal()
     }
 
     return (
@@ -50,6 +56,11 @@ export const Login = () => {
             <button type="reset" value='reset'>RESET</button>
             <button type="submit" value='submit'>LOGIN</button>
             <span>Haven't registered? <a href='/register'>REGISTER</a></span>
+            <p>
+                <span>Login with: </span>
+                <button onClick={google}>Google</button>
+                <button onClick={google}>Facebook</button>
+            </p>
         </form>
     )
 }
