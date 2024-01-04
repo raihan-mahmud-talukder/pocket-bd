@@ -22,7 +22,7 @@ export const Login = () => {
             const result = (await axios.post('/api/users/login', user)).data
             localStorage.setItem('currentUser', JSON.stringify(result))
             modal()
-            navigate('/photos')
+            navigate('/products')
         } catch (error) { console.log(error) }
     }
 

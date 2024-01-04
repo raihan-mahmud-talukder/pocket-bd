@@ -13,19 +13,19 @@ export const Products = () => {
         const data = (await axios.get('/api/products/getallproducts')).data
         setProducts(data)
         setDuplicate(data)
-      } catch (error) {console.log(error)}
+      } catch (error) { console.log(error) }
     }
     fetchData()
   }, [])
 
   return (
     <>
-    <div className="info">
-      <h4>{products.length} products are available</h4>
-    </div>
-    <div className="products">
-      {products.map(product => {return <Product product={product} key={product._id} />})}
-    </div>
+      <div className="info">
+        <h4>{products.length} products are available</h4>
+      </div>
+      <div className="products">
+        {products.map(product => { return <Product product={product} key={product._id} /> })}
+      </div>
     </>
   )
 }
@@ -36,7 +36,10 @@ const Product = ({ product }) => {
 
   const privateRoute = () => {
     if (user) navigate(`/detail/${product._id}`)
-    else alert('login first!'); navigate('/login')
+    else {
+      alert('login first!')
+      navigate('/login')
+    }
   }
 
   return (

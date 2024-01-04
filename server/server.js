@@ -13,11 +13,11 @@ app.use(express.json())
 app.use(cors())
 
 const productRoute = require('./routes/product')
-// const usersRoute = require('./routes/user')
+const usersRoute = require('./routes/user')
 // const feedbackRoute = require('./routes/feedback')
 
 app.use('/api/products', productRoute)
-// app.use('/api/users', usersRoute)
+app.use('/api/users', usersRoute)
 // app.use('/api/feedbacks', feedbackRoute)
 
 const port = process.env.PORT || 5000
