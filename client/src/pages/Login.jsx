@@ -18,7 +18,6 @@ export const Login = () => {
     const login = async event => {
         event.preventDefault()
         const user = { email, password }
-        console.log(user, 'triggered')
         try {
             const result = (await axios.post('/api/users/login', user)).data
             localStorage.setItem('currentUser', JSON.stringify(result))
@@ -27,9 +26,13 @@ export const Login = () => {
         } catch (error) { console.log(error) }
     }
 
-    const google = () => {
+    const google = async () => {
         window.open('http://localhost:5000/auth/google/callback', '_self')
-        // modal()
+        try {
+            const result = (await axios.get('/api/users/login')).data
+            localStorage.setItem('currentUser', JSON.stringify(result))
+            modal()
+        } catch (error) { console.log(error) }
     }
 
     return (

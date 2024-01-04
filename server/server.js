@@ -19,7 +19,6 @@ const session = require('express-session')
 const passport = require('passport')
 const OAuth2Strategy = require('passport-google-oauth2').Strategy
 
-const User = require('./models/user')
 
 const productRoute = require('./routes/product')
 const usersRoute = require('./routes/user')
@@ -37,6 +36,17 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+const User = require('./models/user')
+
+const googleUser = user => {
+    app.get('/api/users/login', async (req, res) => {
+        try {
+            const temp = await User.findOne({ googleId: user.id })
+            res.send(temp)
+        } catch (error) { console.log(error) }
+    })
+}
+
 passport.use(
     new OAuth2Strategy(
         {
@@ -45,6 +55,7 @@ passport.use(
             callbackURL: '/auth/google/callback',
             scope: ['profile', 'email']
         }, async (accessToken, refreshToken, profile, done) => {
+            googleUser(profile)
             try {
                 let user = await User.findOne({ googleId: profile.id })
                 if (!user) {
@@ -61,6 +72,9 @@ passport.use(
         }
     )
 )
+
+
+
 
 passport.serializeUser((user, done) => { done(null, user) })
 
