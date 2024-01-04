@@ -73,12 +73,7 @@ passport.use(
     )
 )
 
-app.get('/logout', (req, res, next) => {
-    req.logout( err => {
-        if (err) { return next(err) }
-        res.redirect('http://localhost:3000/login')
-    })
-})
+
 
 
 passport.serializeUser((user, done) => { done(null, user) })
@@ -91,6 +86,23 @@ app.get('/auth/google/callback', passport.authenticate('google', {
     successRedirect: 'http://localhost:3000/dashboard',
     failureRedirect: 'http://localhost:3000/login'
 }))
+
+app.get("/login", async (req, res) => {
+
+    if (req.user) {
+        await res.send(req.user)
+        res.status(200).json({ message: "user Login", user: req.user })
+    } else {
+        res.status(400).json({ message: "Not Authorized" })
+    }
+})
+
+app.get('/logout', (req, res, next) => {
+    req.logout(err => {
+        if (err) { return next(err) }
+        res.redirect('http://localhost:3000/login')
+    })
+})
 
 const port = process.env.PORT || 5000
 

@@ -13,6 +13,7 @@ import { Cart } from '../pages/Cart'
 export const Header = () => {
   const navigate = useNavigate() // must needed for dynamic navbar
   const user = JSON.parse(localStorage.getItem('currentUser'))
+
   const logout = () => {
     localStorage.removeItem('currentUser')
     window.open("http://localhost:3000/login", "_self")
