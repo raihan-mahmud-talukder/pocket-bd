@@ -212,6 +212,10 @@ a.active {
   width: 5.5rem;
 }
 
+.login p {
+  text-align: center;
+}
+
 footer {
   width: 100%;
   background: green;

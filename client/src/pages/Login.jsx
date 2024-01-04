@@ -57,7 +57,7 @@ export const Login = () => {
             <button type="submit" value='submit'>LOGIN</button>
             <span>Haven't registered? <a href='/register'>REGISTER</a></span>
             <p>
-                <span>Login with: </span>
+                <span>or login with &nbsp; </span>
                 <button onClick={google}>Google</button>
                 <button onClick={google}>Facebook</button>
             </p>
