@@ -8,3 +8,20 @@ const productSchema = mongoose.Schema({
 }, { timestamps: true })
 
 module.exports = mongoose.model('products', productSchema)
+
+// reviews: [{
+//     username: { type: String},
+//     review: String
+// }, {
+//     username: Sabbir,
+//     review: "This is good"
+// }{
+//     username: Sabbir,
+//     review: "This is good"
+// }{
+//     username: Sabbir,
+//     review: "This is good"
+// }]
+
+
+// Products.findAndUpdate({ id: 1}, { $set: { username: 'Sabbir', review: "erevire"}})

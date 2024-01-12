@@ -5,12 +5,15 @@ import { useEffect, useState } from 'react'
 export const Products = () => {
   const [products, setProducts] = useState([])
   const [duplicate, setDuplicate] = useState([])
+  const [count, setCount] = useState(0)
   document.title = 'PRODUCTS'
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = (await axios.get('/api/products/getallproducts')).data
+        const val = 0
+        const val2 = 0
+        const data = (await axios.get(`/api/products/getallproducts?limit=${count}&skip=${val2}`)).data
         setProducts(data)
         setDuplicate(data)
       } catch (error) { console.log(error) }
