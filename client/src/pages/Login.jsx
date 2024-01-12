@@ -35,6 +35,15 @@ export const Login = () => {
         } catch (error) { console.log(error) }
     }
 
+    const facebook = async () => {
+        window.open('http://localhost:5000/auth/facebook/callback', '_self')
+        try {
+            const result = (await axios.get('/api/users/login')).data
+            localStorage.setItem('currentUser', JSON.stringify(result))
+            modal()
+        } catch (error) { console.log(error) }
+    }
+
     return (
         <form onSubmit={login} className='login'>
             <h2>LOGIN</h2>
@@ -62,7 +71,7 @@ export const Login = () => {
             <p>
                 <span>or login with &nbsp; </span>
                 <button onClick={google}>Google</button>
-                <button onClick={google}>Facebook</button>
+                <button onClick={facebook}>Facebook</button>
             </p>
         </form>
     )
