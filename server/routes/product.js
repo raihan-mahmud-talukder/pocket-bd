@@ -5,9 +5,9 @@ const router = express.Router()
 const Product = require('../models/product')
 
 router.get('/getallproducts', async (req, res) => {
+    const { limit, skip } = req.query
     try {
-        console.log(req.query.limit)
-        const products = await Product.find({}).skip(req.query.skip).limit(req.query.limit)
+        const products = await Product.find({}).skip(skip).limit(limit)
         res.send(products)
     } catch (error) {
         return res.status(400).json({ message: error })
